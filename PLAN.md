@@ -20,7 +20,7 @@ That cadence protects hands-on learning in unfamiliar or risky work. For a small
 - Build-to-Learn is an instructional overlay on the Agent's normal autonomy, not a less capable execution mode. It spends user attention only where participation adds learning evidence.
 - The Agent selects a provisional cadence, explains the reason in one sentence, and starts without an extra confirmation stop. The user can override it at any time.
 - Learning covers the current change and the minimum existing context needed to locate it. Systematic study of an entire existing project belongs to a separate future skill.
-- When a local point becomes difficult, zoom in only there and then return to the previous cadence.
+- When observable evidence exposes a local gap, save a return anchor, zoom into only the smallest broken assumption or edge, and return only after the conflict is an executable rule, evidence explains the result, and no blocker still affects the current judgment.
 - After the learner predicts, the Agent discloses its own initial hypothesis and uncertainty. Only evidence-dependent conclusions remain open until the experiment.
 - The learner's stage-end check remains one high-value question. Positive, negative, and transfer cases belong primarily to the skill's regression suite and must not silently become several learner exams.
 - Automatic handoff to a future project-exploration skill is explicitly out of scope.
@@ -64,7 +64,7 @@ These are testable defaults, not three replacement workflows.
 
 1. `SKILL.md`: the single source for cadence inference, the one-sentence rationale, user override, and escalation/de-escalation.
 2. `references/1-立项.md`: proportional discovery and transparent prediction feedback.
-3. `references/2-施工.md`: minimum context maps, cognitive-unit cadence, and selective user observation.
+3. `references/2-施工.md`: minimum context maps, one-judgment-question cadence, focused zoom-and-return, and selective user observation.
 4. `references/3-通关.md`: retain one high-value learner question while keeping regression suites outside the teaching interaction.
 5. `references/4-笔记.md`: proportional note depth and a compact continuation record.
 6. `evals/`: fixed cases used before and after each revision.
@@ -102,5 +102,5 @@ The revision is ready only when:
 
 1. Which signals predict task scale robustly without adding another questionnaire?
 2. What evidence must remain user-observed, and which reversible mechanics can the Agent bundle?
-3. How does a focused zoom reliably return to the prior cadence?
-4. Can “one judgment question per turn” be specified precisely enough that different Agents bundle mechanics consistently?
+3. Can “one judgment question per turn” be specified precisely enough that different Agents bundle mechanics consistently?
+4. Which behavior-level evaluator best detects an Agent that writes the return anchor but still expands the explanation unnecessarily?

@@ -77,9 +77,9 @@ Use the same cases to compare the unmodified v2.8 skill at commit `43dbd46` with
 
 **Prompt:** Start Q1, then have the learner claim that file extension alone determines project identity.
 
-**Expected route:** Quick → Standard for the classification decision only.
+**Expected route:** Keep Quick and apply a focused local zoom to the classification decision; escalate only if the smallest broken assumption cannot be repaired without wider project context.
 
-**Must retain:** A counterexample using generated test data, a corrected goal/source/role model, then a return to the compact main flow.
+**Must retain:** A saved return anchor, a counterexample using generated test data, a corrected goal/source/role model, all three convergence checks, then a one-sentence return to the compact main flow.
 
 **Failure signal:** The Agent either accepts the wrong rule to preserve speed or expands the entire project into Deep mode.
 
@@ -105,7 +105,7 @@ Record one row per run.
 | Field | Value |
 |---|---|
 | Skill revision | Commit SHA |
-| Case | Q1 / Q2 / S1 / D1 / E1 |
+| Case | Q1 / Q2 / S1 / D1 / E1 / P1 |
 | Inferred mode and reason | |
 | User override | None / faster / slower |
 | Wall-clock duration | |
