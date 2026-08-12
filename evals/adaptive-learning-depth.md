@@ -49,9 +49,9 @@ Use the same cases to compare the unmodified v2.8 skill at commit `43dbd46` with
 
 **Known shape:** Small code change, but browser download permissions and generated-file contents create a meaningful boundary.
 
-**Expected route:** Quick initially; escalate to Standard if browser behavior differs from the expected path.
+**Expected route:** Quick initially; if browser behavior differs, save the return anchor and run one focused local check first. Escalate that boundary to Standard only when the minimum check cannot satisfy the convergence criteria and multiple evidence rounds are required.
 
-**Must retain:** Whole-page flow, one real browser observation owned by the user, and a content-level acceptance check rather than “the button appeared.”
+**Must retain:** Whole-page flow, one real browser observation (owned by the user only when the experience is irreplaceable), and a content-level acceptance check rather than “the button appeared.”
 
 ### S1 · Medium behavior change
 
