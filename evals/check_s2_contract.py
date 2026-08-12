@@ -37,6 +37,10 @@ assert "临时放大返回锚点" in notes
 assert "三项收敛证据齐全、回到主线后立即清空" in notes
 assert "回到主线时删除临时锚点" in notes
 
+# A concrete learner check must test the stage model, not hidden domain recall.
+for term in ["场景题输入包", "可由已给证据推出", "参考判断与依据", "不连续换皮重考"]:
+    assert term in passing, f"grounded learner check missing: {term}"
+
 # A local zoom must not silently become a whole-project lesson or a permanent stage.
 assert "看起来复杂”本身不算触发" in skill
 assert "不是新阶段" in skill

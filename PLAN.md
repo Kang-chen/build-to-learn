@@ -23,6 +23,7 @@ That cadence protects hands-on learning in unfamiliar or risky work. For a small
 - When observable evidence exposes a local gap, save a return anchor, zoom into only the smallest broken assumption or edge, and return only after the conflict is an executable rule, evidence explains the result, and no blocker still affects the current judgment.
 - After the learner predicts, the Agent discloses its own initial hypothesis and uncertainty. Only evidence-dependent conclusions remain open until the experiment.
 - The learner's stage-end check remains one high-value question. Positive, negative, and transfer cases belong primarily to the skill's regression suite and must not silently become several learner exams.
+- A concrete learner check supplies every domain fact needed to derive the judgment and tests only the stage model already taught. After the answer, the Agent reveals its reference judgment and basis; missing prompt context is a teaching defect, not a reason to rephrase the exam repeatedly.
 - Automatic handoff to a future project-exploration skill is explicitly out of scope.
 
 ## Invariants
@@ -75,7 +76,7 @@ These are testable defaults, not three replacement workflows.
 | Stage | Runnable result | Learning focus | Status |
 |---|---|---|---|
 | S1 · Quick-flow MVP | A small modification receives an explained Quick route and completes through the existing stage skeleton | Why fixed action-sized turns create delay; how one routing source changes the contract | Complete |
-| S2 · Focused-depth safeguards | Minimum context, local zoom-and-return, and transparent prediction feedback work on misconception cases | How to add depth without expanding the whole session | In progress |
+| S2 · Focused-depth safeguards | Minimum context, local zoom-and-return, transparent prediction feedback, and grounded learner checks work on misconception cases | How to add depth without expanding the whole session | Complete |
 | S3 · Compatibility and release | Standard/Deep behavior, four references, regression cases, and user docs agree | How to preserve validated mechanisms while evolving the instruction hierarchy | Planned |
 
 ## Acceptance Gate
