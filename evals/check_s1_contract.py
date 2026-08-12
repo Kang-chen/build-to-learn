@@ -13,6 +13,7 @@ planning = read("references/1-立项.md")
 building = read("references/2-施工.md")
 passing = read("references/3-通关.md")
 notes = read("references/4-笔记.md")
+active_instructions = "\n".join([skill, planning, building, passing, notes])
 
 required_skill_rules = [
     "自主执行上的学习层",
@@ -31,8 +32,10 @@ retired_absolute_rules = [
     "下一个动手的是用户，不是我",
 ]
 
+retired_absolute_rules.append("手是用户的手 / 一次一步讲完就停")
+
 for rule in retired_absolute_rules:
-    assert rule not in skill, f"retired absolute rule still active: {rule}"
+    assert rule not in active_instructions, f"retired absolute rule still active: {rule}"
 
 reference_contracts = {
     "planning": (planning, "八步仍是思考检查表，不等于八轮对话"),
