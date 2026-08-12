@@ -41,8 +41,8 @@ Use route B: add one pacing decision source to `SKILL.md`, and make the four sta
 
 Replace a fixed interaction cadence with adaptive instructional routing:
 
-- infer a provisional mode from task size, novelty, risk, prior knowledge, and available time;
-- use **one cognitive unit per turn**, not necessarily one mechanical action per turn;
+- default to Quick by reusing project history and prior learner context; only explicit safety, irreversibility, high-cost, or missing-foundation blockers select a slower starting route;
+- organize each turn around **one judgment question**, while allowing multiple reversible mechanical actions that serve that same question;
 - follow **whole → key local detail → whole**;
 - let the Agent bundle reversible mechanical work while preserving user ownership of high-information judgments and observations;
 - zoom in when evidence shows confusion, a broken mental model, or an unexpected result;
@@ -102,4 +102,4 @@ The revision is ready only when:
 1. Which signals predict task scale robustly without adding another questionnaire?
 2. What evidence must remain user-observed, and which reversible mechanics can the Agent bundle?
 3. How does a focused zoom reliably return to the prior cadence?
-4. Can “one cognitive unit per turn” be specified precisely enough that different Agents behave consistently?
+4. Can “one judgment question per turn” be specified precisely enough that different Agents bundle mechanics consistently?

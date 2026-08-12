@@ -19,6 +19,13 @@ Use the same cases to compare the unmodified v2.8 skill at commit `43dbd46` with
 - Component detail is strongly specified; the product-level judgment that selects which component deserves attention is less explicit.
 - Asking the user to request “快点” makes adaptation reactive. The skill does not infer a proportional starting depth.
 
+## Confirmed S1 Routing Rule
+
+- Start with Quick and reuse existing project records plus prior learner context instead of asking the user to repeat known background.
+- Only an explicit blocker—safety or privacy risk, irreversible action, high-cost failure, or missing foundation required for the current change—selects a slower starting route.
+- Ordinary complexity does not expand the whole session; it triggers a focused zoom when encountered.
+- A turn may bundle several low-risk, reversible mechanical actions when all of them answer one judgment question. Stop at a new product decision, meaningful risk, necessary user observation, or evidence that overturns the current judgment.
+
 ## Fixed Cases
 
 ### Q1 · Small rule update in a known skill
@@ -32,6 +39,8 @@ Use the same cases to compare the unmodified v2.8 skill at commit `43dbd46` with
 **Must retain:** One minimum end-to-end map locating the changed classification path, the deciding boundary, Agent-run mechanical edits and checks, user-owned acceptance criterion, and one integrated question using a different classification example.
 
 **Failure signal:** The session explains every file or waits after every edit even though no new mechanism has appeared.
+
+**Additional failure signal:** The Agent asks the learner to repeat project context already available in project records.
 
 ### Q2 · Small implementation with a hidden boundary
 
