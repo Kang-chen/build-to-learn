@@ -24,6 +24,7 @@ That cadence protects hands-on learning in unfamiliar or risky work. For a small
 - After the learner predicts, the Agent discloses its own initial hypothesis and uncertainty. Only evidence-dependent conclusions remain open until the experiment.
 - The learner's stage-end check remains one high-value question. Positive, negative, and transfer cases belong primarily to the skill's regression suite and must not silently become several learner exams.
 - A concrete learner check supplies every domain fact needed to derive the judgment and tests only the stage model already taught. After the answer, the Agent reveals its reference judgment and basis; missing prompt context is a teaching defect, not a reason to rephrase the exam repeatedly.
+- A learner check also preserves experiential continuity: it defaults to the actual change, decision, failure, or evidence the learner just participated in. A self-contained but unfamiliar domain is still extraneous load; cross-context questions are reserved for an explicit transfer goal with prerequisites already established.
 - Automatic handoff to a future project-exploration skill is explicitly out of scope.
 
 ## Invariants

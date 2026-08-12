@@ -39,17 +39,21 @@ for banned in [
     assert banned not in "\n".join([skill, setup, construction, passing]), f"active instructions retain retired stop: {banned}"
 
 assert "按学习目标选题" in passing
+assert "经验连续性" in passing
+assert "实际参与过的修改" in passing
+assert "题目作废" in passing
+assert "能迁移" in passing and "陌生领域" in passing
 assert "只要跑通”不是“不想学" in skill
 assert "不因“可能存在隐藏边界”预先扩张" in skill
 assert "run one focused local check first" in evals
 assert "multiple evidence rounds are required" in evals
 
-for term in ["defaults to Quick", "one judgment", "irreplaceable"]:
+for term in ["defaults to Quick", "one judgment", "irreplaceable", "unrelated project", "transfer goal"]:
     assert term in readme_en, f"English README missing adaptive behavior: {term}"
 for banned in ["those are always yours", "one edge per round", "One small step per turn"]:
     assert banned not in readme_en, f"English README retains retired rule: {banned}"
 
-for term in ["默认从 Quick 开始", "一个判断问题", "不可替代"]:
+for term in ["默认从 Quick 开始", "一个判断问题", "不可替代", "无关陌生项目", "能迁移"]:
     assert term in readme_zh, f"Chinese README missing adaptive behavior: {term}"
 for banned in ["这些动作永远是你的", "一条边一条边走", "一次只推进一小步"]:
     assert banned not in readme_zh, f"Chinese README retains retired rule: {banned}"

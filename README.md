@@ -105,7 +105,7 @@ Right before the stage runs end-to-end for the first time, Claude says "take a g
 Once it runs, the test:
 
 - **One question. That's it.** Claude picks the angle worth testing right now, four sub-questions maximum.
-- A scenario question includes the target, the relevant facts already taught, the observed behavior, and one decision. It never requires you to guess hidden domain knowledge. After you answer, Claude shows its reference judgment and basis.
+- A scenario question uses the change, decision, failure, or evidence you just worked through, and includes the target, the relevant facts already taught, the observed behavior, and one decision. A self-contained but unrelated project is still the wrong test. Cross-context scenarios are reserved for an explicit transfer goal whose prerequisites are already familiar. After you answer, Claude shows its reference judgment and basis.
 - Reasoning out loud is enough. **Getting it wrong is the useful outcome** — that's the part that needs another pass.
 
 Then Claude hands you a map of your own understanding: what's solid ✅, what's shaky 🔶, and which upcoming stage will firm up each shaky piece. The test feeds back into building, rather than being a test for its own sake.
