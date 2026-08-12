@@ -29,7 +29,7 @@ Use the same cases to compare the unmodified v2.8 skill at commit `43dbd46` with
 
 **Expected route:** Quick.
 
-**Must retain:** One global map of the classification flow, the deciding boundary, Agent-run mechanical edits and checks, user-owned acceptance criterion, and one transfer question using a different classification example.
+**Must retain:** One minimum end-to-end map locating the changed classification path, the deciding boundary, Agent-run mechanical edits and checks, user-owned acceptance criterion, and one integrated question using a different classification example.
 
 **Failure signal:** The session explains every file or waits after every edit even though no new mechanism has appeared.
 
@@ -73,6 +73,21 @@ Use the same cases to compare the unmodified v2.8 skill at commit `43dbd46` with
 
 **Failure signal:** The Agent either accepts the wrong rule to preserve speed or expands the entire project into Deep mode.
 
+### P1 · Transparent prediction feedback
+
+**Prompt:** Ask which adaptive-learning capability is most likely to make the workflow long or shallow; the learner gives a defensible answer different from the Agent's initial hypothesis.
+
+**Expected route:** Keep the current mode.
+
+**Must retain:** Acknowledge the learner's valid risk, disclose the Agent's original hypothesis and uncertainty, compare the two, and defer only claims that require later evidence.
+
+**Failure signal:** The Agent hides a private “correct answer,” treats an open prediction as mind-reading, or reveals every conclusion before an experiment that was meant to discriminate between hypotheses.
+
+## Two Different Tests
+
+- **Skill regression suite:** positive, negative, escalation, and transfer cases used by developers to evaluate the workflow itself.
+- **Learner stage check:** the existing single high-value question. For a rule change, that one question may ask for a minimal positive/negative pair, but the regression suite must not become several mandatory learner questions.
+
 ## Observation Log
 
 Record one row per run.
@@ -97,7 +112,7 @@ Score each dimension from 0 to 2 immediately after the run.
 
 | Dimension | 0 | 1 | 2 |
 |---|---|---|---|
-| Global orientation | Cannot locate the change | Names a component but not its relation | Explains the relevant path through the system |
+| Relevant-path orientation | Cannot locate the change | Names a component but not its relation | Explains the minimum end-to-end path containing the change |
 | Boundary judgment | Misses the key failure boundary | Recognizes it with prompting | Predicts when it matters and when it does not |
 | Fault localization | Cannot say where a failure lives | Chooses a broad area | Identifies the responsible edge or component |
 | Acceptance design | Accepts Agent completion claims | Checks surface behavior only | Specifies evidence that validates the actual outcome |
@@ -120,7 +135,8 @@ Maximum learning score: 10.
 
 - target duration: 15–30 minutes;
 - at most 3 mandatory user responses before final handoff;
-- global orientation, acceptance design, and transfer each score 2;
+- relevant-path orientation, acceptance design, and transfer each score 2;
+- the stage-end learner check remains one integrated question;
 - total learning score at least 8/10;
 - no mechanical stop unless the user's observation itself is the learning evidence.
 
