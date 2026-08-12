@@ -78,7 +78,7 @@ These are testable defaults, not three replacement workflows.
 |---|---|---|---|
 | S1 · Quick-flow MVP | A small modification receives an explained Quick route and completes through the existing stage skeleton | Why fixed action-sized turns create delay; how one routing source changes the contract | Complete |
 | S2 · Focused-depth safeguards | Minimum context, local zoom-and-return, transparent prediction feedback, and grounded learner checks work on misconception cases | How to add depth without expanding the whole session | Complete |
-| S3 · Compatibility and release | Standard/Deep behavior, four references, regression cases, and user docs agree | How to preserve validated mechanisms while evolving the instruction hierarchy | In progress — implementation and behavior regression pass; learner check pending |
+| S3 · Compatibility and release | Standard/Deep behavior, four references, regression cases, and user docs agree | How to preserve validated mechanisms while evolving the instruction hierarchy | Complete |
 
 ## Acceptance Gate
 
