@@ -65,3 +65,19 @@ This evidence supports the single stage-end question; it is not three separate q
 ## Limitation
 
 This walkthrough proves instruction coherence only. It does not prove that a fresh Agent will follow the contract consistently; that requires forward testing in S3.
+
+## Learner Stage Check
+
+The learner correctly concluded that the Agent should reuse the confirmed source/role rule and directly modify the skill without creating another teaching stop. The learner also identified the decisive stop condition: new evidence in the project log that conflicts with the confirmed rule, such as a requirement to classify every file atomically by topic.
+
+Assessment:
+
+| Dimension | Score | Evidence |
+|---|---:|---|
+| Relevant-path orientation | 2 | Located the governing principle in prior user feedback and project records |
+| Boundary judgment | 2 | Distinguished reusable context from a real principle conflict |
+| Fault localization | 2 | Pointed to conflicting log/rule evidence as the place requiring discussion |
+| Acceptance design | 1 | Required a final report, but did not yet require concrete changed-rule and test evidence |
+| Transfer | 2 | Applied the routing rule to a new conflicting-policy example |
+
+Total: **9/10 — S1 learner check passed.** Acceptance evidence becomes an S2 reinforcement point.

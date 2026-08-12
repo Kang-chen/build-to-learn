@@ -74,8 +74,8 @@ These are testable defaults, not three replacement workflows.
 
 | Stage | Runnable result | Learning focus | Status |
 |---|---|---|---|
-| S1 · Quick-flow MVP | A small modification receives an explained Quick route and completes through the existing stage skeleton | Why fixed action-sized turns create delay; how one routing source changes the contract | In progress |
-| S2 · Focused-depth safeguards | Minimum context, local zoom-and-return, and transparent prediction feedback work on misconception cases | How to add depth without expanding the whole session | Planned |
+| S1 · Quick-flow MVP | A small modification receives an explained Quick route and completes through the existing stage skeleton | Why fixed action-sized turns create delay; how one routing source changes the contract | Complete |
+| S2 · Focused-depth safeguards | Minimum context, local zoom-and-return, and transparent prediction feedback work on misconception cases | How to add depth without expanding the whole session | In progress |
 | S3 · Compatibility and release | Standard/Deep behavior, four references, regression cases, and user docs agree | How to preserve validated mechanisms while evolving the instruction hierarchy | Planned |
 
 ## Acceptance Gate
