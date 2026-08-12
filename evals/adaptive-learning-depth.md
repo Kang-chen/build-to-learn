@@ -21,6 +21,7 @@ Use the same cases to compare the unmodified v2.8 skill at commit `43dbd46` with
 
 ## Confirmed S1 Routing Rule
 
+- Treat normal Agent autonomy as the execution baseline. Enabling Build-to-Learn adds judgment-oriented teaching; it does not require the learner to take over low-value mechanics.
 - Start with Quick and reuse existing project records plus prior learner context instead of asking the user to repeat known background.
 - Only an explicit blocker—safety or privacy risk, irreversible action, high-cost failure, or missing foundation required for the current change—selects a slower starting route.
 - Ordinary complexity does not expand the whole session; it triggers a focused zoom when encountered.

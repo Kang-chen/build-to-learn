@@ -17,6 +17,7 @@ That cadence protects hands-on learning in unfamiliar or risky work. For a small
 
 ## Confirmed Scope
 
+- Build-to-Learn is an instructional overlay on the Agent's normal autonomy, not a less capable execution mode. It spends user attention only where participation adds learning evidence.
 - The Agent selects a provisional cadence, explains the reason in one sentence, and starts without an extra confirmation stop. The user can override it at any time.
 - Learning covers the current change and the minimum existing context needed to locate it. Systematic study of an entire existing project belongs to a separate future skill.
 - When a local point becomes difficult, zoom in only there and then return to the previous cadence.
