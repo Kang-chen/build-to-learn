@@ -44,15 +44,19 @@ Every launch after that, it lists your existing projects and where each one is s
 
 You do the three things AI can't do for you:
 
-**1. Make the calls.** Directional choices get put in front of you, and Claude won't move until you pick. Things like "native window or web view?" Implementation details like "which function should we use" never reach you.
+**1. Make the calls.** You own consequential direction, boundaries, and acceptance criteria. Claude reuses decisions already on record and safely infers low-risk details; it only stops when a missing choice would materially change the result.
 
-**2. Run it yourself.** Running commands, clicking buttons, watching what happens — those are always yours. Claude sets the stage, points at the exact spot, then stops and waits.
+**2. Judge the evidence.** Claude runs low-risk, reversible commands and automated checks, then shows you evidence you can inspect. You take the controls only when direct experience is irreplaceable — for example visual feel, perceived latency, or a real authorization boundary.
 
-> **Claude stopping isn't Claude stalling — it's waiting for your hands.** This is the single most common misunderstanding. You report what you saw, and then it explains why.
+> Enabling this skill does not make the agent less autonomous. It adds learning at the decisions and observations that matter.
 
 **3. Answer the exit question.** At the end of every stage Claude asks you one question — exactly one — to check whether this stage actually landed.
 
 And one thing that overrides everything: any "wait, why?" that pops into your head is the highest-value moment in the session. Ask it. Claude drops the main line, digs into it with you, and brings you back.
+
+### How pacing works
+
+The workflow **defaults to Quick**: Claude gives one sentence explaining why, shows the minimum end-to-end path, and completes reversible mechanics around **one judgment question**. Standard adds detail around one unfamiliar boundary. Deep is reserved for safety, privacy, irreversible or costly actions, or several interacting unfamiliar mechanisms. All three keep the same ownership rule: you judge; Claude executes the mechanics. You can ask for faster or deeper at any time.
 
 ## What a project looks like
 
@@ -63,12 +67,12 @@ Four phases. Setup runs once; build and clear loop once per stage; notes happen 
 Claude works through these, without touching technical vocabulary:
 
 1. **Listens.** You describe what you want to make. It doesn't interrupt. Meanwhile it scans your capability library for things you've already learned that apply here.
-2. **Interrogates the product.** One question at a time, each with 2–3 concrete options to pick or amend. All product questions: who uses it, when, "what if they select a whole paragraph?", "what if they're offline?"
+2. **Clarifies the product.** It reuses known context and groups safe assumptions. Only consequential gaps become questions, with 2–3 concrete options to pick or amend.
 3. **Lays out the capability blocks.** Your idea gets split into a handful of capabilities, each named in plain language and tagged: already in your library ✅ / off-the-shelf tech exists ✔ / there's a wall here you'll hit ⚠️ / even the AI isn't sure ❓.
 4. **Asks you to guess.** "Which of these looks hardest to you?" Your guess gets pinned to the stage where it'll be settled, so you can check your intuition when you hit it for real.
 5. **Asks how deep you want to go.** Three levels: just get it running / be able to explain the mechanism / be able to transfer it to the next project. This decides how much Claude just does versus walks you through.
 6. **Proposes technical directions.** Two or three routes with plain-language trade-offs and a recommendation. You decide. It will never ask you "SwiftUI or AppKit?"
-7. **Puts a confirmation list on the table.** Five items you sign off one by one: the product in one sentence, the scenario list, what counts as done, your depth level, and the first ladder. **Until all five are confirmed, it writes zero code and creates zero files.**
+7. **Puts one confirmation list on the table.** It collects the product sentence, scenarios, definition of done, learning goal, and first ladder into one review point instead of five separate stops. **Until that package is confirmed, it writes no product code.**
 8. **Creates the folders** and tells you where notes and code each live.
 
 **About the ladder:** one line per stage. Stage 1 is a minimal version that actually runs; each later stage adds one block and still runs.
@@ -81,27 +85,27 @@ The next stage is written in detail, the one after gets a single line, and anyth
 
 That diagram *is* the learning object. Every round after, Claude points at it first — "we're on the X→Y edge now" — so you always know where you are. The diagram also carries the decisions you'll need to make this stage, but **only as open questions, no answers**. You make each call when construction reaches that component.
 
-Then it walks the diagram, one edge per round. Every load-bearing component follows the same rhythm:
+Then it walks the diagram around one judgment question at a time. Several adjacent edges and mechanical actions can stay in the same round when they serve that judgment. Every load-bearing component still follows the same learning rhythm:
 
 1. Why this component exists and what it's for
 2. How it works, in plain language (no code yet)
 3. How the code expresses that logic
-4. **You run it and see what happens**
+4. **Run it and inspect what happens** — Claude runs repeatable checks; you run only experiences it cannot reproduce for you
 
-Some experiments are designed to fail. Hitting a wall with your own hands beats ten explanations. You bring the symptom back, and Claude explains the causal chain on the spot.
+Some experiments are designed to fail. Seeing a real contrast beats ten explanations: Claude runs a safe, repeatable failure when it can, shows you the symptom, and explains the causal chain. You take over only when the experience itself matters.
 
-**Claude does not quiz you during construction.** It explains, you run, it explains. Testing is concentrated at the end of the stage so it doesn't break your flow.
+**Claude does not quiz you during construction.** It explains, executes and shows evidence; you can interrupt with a question at any time. Testing is concentrated at the end of the stage so it doesn't break your flow.
 
-One small step per turn, then it stops. Too slow? Say so. Too fast? Say stop.
+If a result contradicts the current model, Claude saves the current route, zooms into only the broken assumption, and returns once the rule and evidence explain the result. Too slow? Say so. Too fast? Say stop.
 
 ### 3. Clear — acceptance plus one question
 
-Right before the stage runs end-to-end for the first time, Claude says "take a guess at what this is about to do." **You don't have to answer** — either way it hands off immediately and you run it. Afterwards it walks the real behavior back against what you expected.
+Right before the stage runs end-to-end for the first time, Claude says "take a guess at what this is about to do." **You don't have to answer** — either way it runs the repeatable checks or hands over an irreplaceable experience immediately. Afterwards it walks the real behavior back against what you expected.
 
 Once it runs, the test:
 
 - **One question. That's it.** Claude picks the angle worth testing right now, four sub-questions maximum.
-- The usual format is **a feature you were never taught**, and you say four things: which component you'd touch, what shape you'd follow, which trap you'd hit, and how you'd verify the AI actually finished.
+- A scenario question uses the change, decision, failure, or evidence you just worked through, and includes the target, the relevant facts already taught, the observed behavior, and one decision. A self-contained but unrelated project is still the wrong test. Cross-context scenarios are reserved for an explicit transfer goal whose prerequisites are already familiar. After you answer, Claude shows its reference judgment and basis.
 - Reasoning out loud is enough. **Getting it wrong is the useful outcome** — that's the part that needs another pass.
 
 Then Claude hands you a map of your own understanding: what's solid ✅, what's shaky 🔶, and which upcoming stage will firm up each shaky piece. The test feeds back into building, rather than being a test for its own sake.
@@ -141,7 +145,7 @@ Say these anytime — Claude responds immediately.
 |---|---|
 | "wait, I have a question" | Hard stop, pure Q&A, no advancing |
 | "I didn't follow that — say it differently" | Zooms into that piece, explains it fully, then walks you back to the main line |
-| "this feels too smooth / it hasn't landed" | Claude has you pick the shakiest component, then **deliberately breaks it** so you can verify with your own hands what you assumed you understood |
+| "this feels too smooth / it hasn't landed" | Claude isolates the shakiest component, runs a minimal contrastive failure, and shows the evidence; you take over only for an irreplaceable experience |
 | "faster" / "slower" | Adjusts step size |
 | "hold off on the code, let me think" | Waits on the decision |
 | "this stage is too big, split it" | Rewrites the ladder on the spot into two stages that both run |
