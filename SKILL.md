@@ -1,6 +1,7 @@
 ---
 name: build-to-learn
-description: Learn by building — learning is the goal, building is the test. When the user wants to make something, first turn the product into scenario scripts, translate those into capability blocks, then cut a ladder of stages: stage 1 is a runnable MVP, every later stage adds one block and still runs. Each stage carries a component diagram as the learning object. Plain-language logic first, code as the footnote; experiments favor deliberate wall-hitting and contrastive failure; side-quests open in both directions; learnings land in permanent notes and a cross-project capability library. Built for the delegator who ships while AI writes the code. Speaks whatever language the user speaks. Triggers: /build-to-learn, "walk me through building X and make me actually learn it", "I want to build X but I don't know the tech", "don't just write it for me, I want to understand it", "I still don't get this part", "next one"; 中文触发：/边做边学、「带我做个东西并学会」「我想做 X 但不懂技术」「别直接帮我写，我要学会」「这块我还没懂」「继续下一个」。Use when the user wants to deeply LEARN how something works by building it, where building is the test of understanding — not get code dumped on them.
+description: >-
+  Use when a user wants to understand a technical system by building or modifying it with an Agent instead of only receiving finished code, especially for learning while building, understanding how a project works, improving technical judgment, or explaining mechanisms and boundaries. Trigger on /build-to-learn; 中文触发包括“边做边学”“带我做并教会我”“别只写代码，我想理解”“继续下一阶段”。
 ---
 
 # Build to Learn（边做边学 · 学为目的，做为检验）

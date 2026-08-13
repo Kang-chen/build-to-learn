@@ -1,6 +1,7 @@
 """Static compatibility contract for S3 release preparation."""
 
 from pathlib import Path
+import re
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,6 +19,24 @@ notes = read("references/4-笔记.md")
 readme_en = read("README.md")
 readme_zh = read("README.zh-CN.md")
 evals = read("evals/adaptive-learning-depth.md")
+frontmatter = skill.split("---", 2)[1]
+assert re.search(r"(?m)^name: build-to-learn$", frontmatter)
+assert re.search(r"(?m)^description: >-$", frontmatter), "description must use valid folded YAML"
+description_lines = []
+collecting_description = False
+for line in frontmatter.splitlines():
+    if line == "description: >-":
+        collecting_description = True
+        continue
+    if collecting_description:
+        if line.startswith("  "):
+            description_lines.append(line.strip())
+        else:
+            break
+description = " ".join(description_lines)
+assert description.startswith("Use when ")
+assert len(description) <= 500, "description should remain trigger-focused"
+
 
 for term in ["节奏档位和学习目标是两条轴", "Quick", "Standard", "Deep"]:
     assert term in skill, f"SKILL mode contract missing: {term}"
